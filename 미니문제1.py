@@ -14,3 +14,22 @@ def waterPay(company, liter):
   return payment
 
 print(f'''얼마를 내야 하냐면... {waterPay('b', 87)}원이야~ ''')
+
+# def waterPay(company, usage):
+#   pay = 0
+  
+#   if company == 'A':
+#     pay = usage * 100
+#   elif company == 'B':
+#     if usage <= 50:
+#       pay = usage*150
+#     else:
+#       pay = 50*150 + (usage-50)*75
+#   else:
+#     print('회사 이름을 잘못 입력하셨습니다.')
+    
+#   print('수도 요금을 계산합니다.')
+#   company = input('수도 회사를 입력하세요 : ')
+#   usage = int(input('수도 사용량을 입력하세요 : '))
+  
+#   print(f'수도 요금은 {waterPay(company, usage)} 입니다.')
