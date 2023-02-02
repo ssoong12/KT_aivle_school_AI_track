@@ -7,6 +7,6 @@ def max4(a, b, c, d):
     maximum = c
   if d > maximum:
     maximum = d
-  return maximum
+  return maximum # 최대값 반환
 
 print(f'max4(156, 879, 14, 475) = {max4(156, 879, 14, 475)}')
