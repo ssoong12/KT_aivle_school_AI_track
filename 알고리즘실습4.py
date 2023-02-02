@@ -6,14 +6,14 @@
 
 # root ** pwr ( 1 < pwr < 6 )
 
-number = int(input('숫자를 입력하세요 : '))
+number = int(input('숫자를 입력하셈 : '))
 flag = 0
 
 for root in range(1, number+1):
   for pwr in range(2, 6):
     if (root ** pwr) == number:
-      print(f'{root}**{pwr} = {number}입니다')
+      print(f'{root}**{pwr} = {number}임')
       flag = 1
       
 if flag == 0:
-  print('해당하는 결과가 없습니다.')
+  print('해당하는 결과가 없슴다.')
