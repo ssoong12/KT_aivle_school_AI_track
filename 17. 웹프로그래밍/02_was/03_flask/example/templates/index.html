@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 웹브라우져 호환성 설정 IE=edge IE8 버전 이상 표준모드로 렌더링  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- viewport : 렌더링 영역의 크기를 설정 : 반응형 웹에서 사용 -->
+    <!-- width=device-width : 페이지 너비를 스크린 너비로 설정 -->
+    <!-- initial-scale=1.0 : 1배로 설정 0 ~ 10 사이의 수를 가짐 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 브라우져 tab에 출력되는 문자열 -->
+    <title>Cover</title>
+
+    <!-- 브라우져 tab에 출력되는 이미지 -->
+    <link rel="icon" href="https://www.kt.com/favicon.ico">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <!-- web font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <main class="contents">
+        <section class="wrap">
+            <h1>Cover Page</h1>
+            <p>Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <button class="over-red" type="button" name="button">Learn More</button>
+        </section>
+    </main><!-- main -->
+    {% include 'footer.html' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('header a.home').addClass('active');
+        });
+    </script>
+</body>
+</html>
