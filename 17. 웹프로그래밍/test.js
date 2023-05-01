@@ -13,8 +13,18 @@
 var count = 5;
 for (var i = 0; i < count; i++) {
   if (i < 3) {
-    console.log("3 이하");
+    console.log(i, "3 이하");
   } else {
-    console.log("3 이상");
+    console.log(i, "3 이상");
   }
 }
+
+var data1 = 10;
+var data2 = data1++;
+console.log(data1, data2);
+
+console.log(NaN == NaN, NaN === NaN);
+
+console.log(
+  "NaN은 같은 값을 비교하더라도 False를 리턴하고, 같은 타입이라도 False 반환"
+);
