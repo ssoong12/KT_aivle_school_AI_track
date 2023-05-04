@@ -28,3 +28,5 @@ console.log(NaN == NaN, NaN === NaN);
 console.log(
   "NaN은 같은 값을 비교하더라도 False를 리턴하고, 같은 타입이라도 False 반환"
 );
+
+console.log("AWS");
