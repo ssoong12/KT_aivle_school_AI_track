@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mysite | Blog</title>
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <ul>
+      {% for p in post_list %}
+      <li>{{ p.id }}. {{ p.title }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
