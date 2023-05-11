@@ -25,6 +25,7 @@ def child(req):
     return render(req, 'child.html')
 
 urlpatterns = [
+    path('admin/', admin.site.urls),    
     path('', views.index),    
     path('chapter/<id>/', views.chapter),    
     path('control/', views.control),
