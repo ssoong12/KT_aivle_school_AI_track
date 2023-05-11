@@ -31,10 +31,15 @@ from django.shortcuts import render
 def hello(req):
     return render(req, 'index.html')
 
+# template 상속
+def child(req):
+    return render(req, 'child.html')
+
 urlpatterns = [
     path('', views.index),    
     path('chapter/<id>/', views.chapter),    
     path('control/', views.control),
+    path('child/', child),
     path('hello/', hello),
     path('images/<name>/', load_img),    
 ]
