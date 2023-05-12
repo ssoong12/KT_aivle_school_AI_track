@@ -7,3 +7,6 @@ class Post(models.Model):
   content = models.TextField()
   created_at = models.DateField(auto_now_add=True)
   published_at = models.DateField(null=True)
+  
+class Category(models.Model):
+  name = models.CharField(max_length=100)
