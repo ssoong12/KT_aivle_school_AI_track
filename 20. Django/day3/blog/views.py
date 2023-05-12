@@ -6,23 +6,13 @@ from . import models
 #     "02": {'title': 'ORM', 'content': 'ORM is ...'},
 # }
 
-def home(req):
-    posts = models.Post.objects.all()
-    return render(req, 'blog/index.html', {
-        'post_list': posts, 
-        'post': {
-            'title': 'Django',
-            'content': 'Django is ...'
-        }
-    })
+def post_list(req):
+   posts = models.Post.objects.all()
+   return render(req, 'blog/index.html', { 'post_list': posts })
 
-def post_list(req, id):
-    posts = models.Post.objects.all()
-    post = models.Post.objects.get(id=id)
-    return render(req, 'blog/index.html', {
-        'post_list': posts, 
-        'post' : post
-    })
+def post_detail(req, id: int):
+   post = models.Post.objects.get(id=id)
+   return render(req, 'blog/detail.html', { 'post': post })
 
 # id:01
 # { 'post_list': posts, 'title': 'Django', 'content': 'Django is ...'}
