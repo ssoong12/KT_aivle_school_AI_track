@@ -1,0 +1,8 @@
+<h1>블로그 목록 보기</h1>
+<ul>
+    {% for p in post_list %}
+    <li>
+        <a href="/blog/{{ p.id }}/">{{ p.id }}. {{ p.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
