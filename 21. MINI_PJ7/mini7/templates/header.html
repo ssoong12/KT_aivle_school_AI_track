@@ -1,5 +1,92 @@
-<p>test</p>
-<div>
-  <h1 class="test">test란다</h1>
-  <p>test입니다.</p>
-</div>
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">
+      <i class="ri-hand-heart-line nav__logo-icon"></i>AIVLE 30
+    </a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link active-link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#thinking" class="nav__link">수어 소개</a>
+        </li>
+        <li class="nav__item">
+          <a href="#diary" class="nav__link">ChatGPT</a>
+        </li>
+        <li class="nav__item">
+          <a href="#incinerator" class="nav__link">수어 ChatGPT</a>
+        </li>
+        <li class="nav__item">
+          <a href="#incinerator" class="nav__link">팀원 소개</a>
+        </li>
+        <li class="nav__item">
+          <a href="#incinerator" class="nav__link">참조</a>
+        </li>
+      </ul>
+
+      <!-- 모바일 네비게이션 close 버튼 -->
+      <div class="nav__close" id="nav-close">
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <div class="nav__btns">
+      <!-- 한글/영문 변경 버튼 -->
+      <i class="ri-english-input change-theme" id="theme-button"></i>
+      <!-- 모바일 네비게이션 opne 버튼 -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  /*=============== 반응형. SHOW MENU ===============*/
+  const navMenu = document.getElementById("nav-menu"),
+    navToggle = document.getElementById("nav-toggle"),
+    navClose = document.getElementById("nav-close");
+
+  /*===== MENU SHOW. 메뉴 보이기 =====*/
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.add("show-menu");
+    });
+  }
+
+  /*===== MENU HIDDEN. 메뉴 닫기 =====*/
+  if (navClose) {
+    navClose.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+    });
+  }
+
+  /*=============== REMOVE MENU MOBILE. 모바일에서 메뉴 toggle ===============*/
+  const navLink = document.querySelectorAll(".nav__link");
+
+  function linkAction() {
+    const navMenu = document.getElementById("nav-menu");
+    // 각 nav__link를 클릭하면 show-menu 클래스가 제거됨
+    navMenu.classList.remove("show-menu");
+  }
+  navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+  /*=============== CHANGE BACKGROUND HEADER. header 배경 변경 ===============*/
+  function scrollHeader() {
+    const header = document.getElementById("header");
+    // 스크롤 높이가 80 veiwport 보다 크면 header 태그에 scroll-header class 를 추가한다.
+    if (this.scrollY >= 80) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+  }
+  window.addEventListener("scroll", scrollHeader);
+
+  /*=============== 탑 버튼 보이기. SHOW SCROLL UP ===============*/
+  function scrollUp() {
+    const scrollUp = document.getElementById("scroll-up");
+    // 스크롤 높이가 400 viewport보다 높을 경우 스크롤 탑 클래스가 있는 태그에 Show-scroll 클래스를 추가한다.
+    if (this.scrollY >= 400) scrollUp.classList.add("show-scroll");
+    else scrollUp.classList.remove("show-scroll");
+  }
+  window.addEventListener("scroll", scrollUp);
+</script>
