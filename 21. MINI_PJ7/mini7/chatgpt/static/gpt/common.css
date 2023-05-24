@@ -325,3 +325,14 @@ body.dark-theme {
     right: 3rem;
   }
 }
+
+/*=============== SCROLL BAR. 스크롤바 css ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: hsl(var(--hue), 4%, 53%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--hue), 4%, 29%);
+  border-radius: 0.5rem;
+}
